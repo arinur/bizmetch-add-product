@@ -18,8 +18,9 @@ class StatusStockPageState extends State<StatusStockPage> {
         backgroundColor: Colors.white,
         // Title
         title: Text("Status Stock"),
-        leading: Icon(
-          Icons.arrow_back_ios,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () => Navigator.pop(context, false),
         ),
       ),
       // Body
@@ -29,6 +30,35 @@ class StatusStockPageState extends State<StatusStockPage> {
           children: <Widget>[
             _rowStock("Stock Always ready"),
             _rowStock("Stock Limited"),
+            Container(
+                margin: EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    new SizedBox(
+                      height: 10,
+                    ),
+                    new Text("Stock Total",
+                        style: new TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 14)),
+                    new SizedBox(
+                      height: 10,
+                    ),
+                    new TextFormField(
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(10),
+                          border: OutlineInputBorder(),
+                          hintText: "Input Stock Total",
+                        )),
+                    new SizedBox(
+                      height: 10,
+                    ),
+                    new Text(
+                        "Stock will be decrease automatically if product sold ",
+                        style: new TextStyle(color: Colors.grey, fontSize: 14)),
+                  ],
+                )),
           ],
         ),
       ),
@@ -72,7 +102,7 @@ class StatusStockPageState extends State<StatusStockPage> {
           new Container(
             height: 1,
             color: Colors.grey[300],
-          )
+          ),
         ],
       ),
     );

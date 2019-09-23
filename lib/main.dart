@@ -1,5 +1,6 @@
 import 'package:bizmetch/add_product_page.dart';
 import 'package:bizmetch/choose_catalog_page.dart';
+import 'package:bizmetch/home_page.dart';
 import 'package:bizmetch/product_price_page.dart';
 import 'package:bizmetch/product_specifications_page.dart';
 import 'package:bizmetch/status_stock_page.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
     ProductOverviewPage.tag: (context) => ProductOverviewPage(),
     AddProductOverviewPage.tag: (context) => AddProductOverviewPage(),
     ProductSpesificationPage.tag: (context) => ProductSpesificationPage(),
+    HomePage.tag: (context) => HomePage(),
   };
 
   @override
@@ -39,7 +41,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         fontFamily: 'Nunito',
       ),
-      home: AddProductPage(),
+      home: HomePage(),
       routes: routes,
     );
   }

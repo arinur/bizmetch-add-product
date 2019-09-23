@@ -372,9 +372,9 @@ class ProductSpesificationPageState extends State<ProductSpesificationPage> {
         backgroundColor: Colors.white,
         // Title
         title: Text("Product Spesifications"),
-        leading: Icon(
-          Icons.arrow_back_ios,
-        ),
+        leading: IconButton(icon:Icon(Icons.arrow_back_ios),
+          onPressed:() => Navigator.pop(context, false),
+      ),
       ),
       // Body
       body: Container(

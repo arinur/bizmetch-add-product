@@ -18,9 +18,9 @@ class ProductPricePageState extends State<ProductPricePage> {
         backgroundColor: Colors.white,
         // Title
         title: Text("Product Price"),
-        leading: Icon(
-          Icons.arrow_back_ios,
-        ),
+        leading: IconButton(icon:Icon(Icons.arrow_back_ios),
+          onPressed:() => Navigator.pop(context, false),
+      ),
       ),
       // Body
       body: Container(

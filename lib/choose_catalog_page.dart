@@ -17,9 +17,9 @@ class ChooseCatalogPageState extends State<ChooseCatalogPage> {
         backgroundColor: Colors.white,
         // Title
         title: Text("Choose Catalog"),
-        leading: Icon(
-          Icons.arrow_back_ios,
-        ),
+        leading: IconButton(icon:Icon(Icons.arrow_back_ios),
+          onPressed:() => Navigator.pop(context, false),
+      ),
       ),
       // Body
       body: Container(

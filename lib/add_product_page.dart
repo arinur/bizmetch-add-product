@@ -23,9 +23,10 @@ class AddProductPageState extends State<AddProductPage> {
             backgroundColor: Colors.white,
             // Title
             title: Text("Add Product"),
-            leading: Icon(
-              Icons.arrow_back_ios,
-            ),
+             leading: IconButton(icon:Icon(Icons.arrow_back_ios),
+          onPressed:() => Navigator.pop(context, false),
+        )
+            
           ),
           // Body
           body: Container(
